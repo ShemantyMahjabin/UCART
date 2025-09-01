@@ -1,0 +1,80 @@
+/* public/loginSeller.css */
+
+body {
+    background-color: #ecf0f1; /* Light gray background */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h1 {
+    color: #3498db; /* Blue title color */
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    color: #555;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+  }
+  
+  .login-form {
+    text-align: left;
+  }
+  
+  h3 {
+    color: #2c3e50; /* Dark blue-gray for the form title */
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 16px;
+  }
+  
+  label {
+    margin-bottom: 8px;
+  }
+  
+  input {
+    padding: 10px;
+  }
+  
+  button {
+    background-color: #3498db; /* Blue button color */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2980b9; /* Darker shade on hover */
+  }
+  
+  a {
+    text-decoration: none;
+    color: #007bff; /* Blue link color */
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

@@ -1,0 +1,61 @@
+<!-- views/sellerprofile.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Profile</title>
+    <link rel="stylesheet" href="sellerprofile">
+</head>
+
+<body>
+    <div class = "logo"></div>
+    <div class="nav-address border">
+        <!-- <a href="/sellerhome?sellerid=<%= sellerid %>">home <%= sellerid %>
+        </div>
+        </a> -->
+    <div class="container">
+        <h1>Seller Profile</h1>
+
+        <div class="profile-info">
+            <label for="businessType">Business Type:</label>
+            <input type="text" id="businessType" name="businessType" value="<%= sellerProfile.businessType %>" readonly>
+
+            <label for="businessName">Business Name:</label>
+            <input type="text" id="businessName" name="businessName" value="<%= sellerProfile.businessName %>" readonly>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="<%= sellerProfile.email %>" readonly>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" value="********" readonly>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="<%= sellerProfile.name %>" readonly>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" value="<%= sellerProfile.phone %>" readonly>
+
+            <label for="nid">NID:</label>
+            <input type="text" id="nid" name="nid" value="<%= sellerProfile.nid %>" readonly>
+
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday" value="<%= sellerProfile.birthday %>" readonly>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" readonly>
+                <option value="male" <%= sellerProfile.gender === 'male' ? 'selected' : '' %>>Male</option>
+                <option value="female" <%= sellerProfile.gender === 'female' ? 'selected' : '' %>>Female</option>
+                <option value="other" <%= sellerProfile.gender === 'other' ? 'selected' : '' %>>Other</option>
+            </select>
+
+            <!-- Add other input fields for Division, District, Upazila, Thana, Zipcode, Road no, House no -->
+        </div>
+
+        <button type="submit" class="update-button">Update Profile</button>
+    </div>
+
+</body>
+</html>

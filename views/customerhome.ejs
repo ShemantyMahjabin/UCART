@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>UCART</title>
+     <style>
+         /* Add your CSS styles for the page here */
+         body {
+             font-family: Arial, sans-serif;
+             margin: 20px;
+         }
+         #productContainer {
+             display: flex;
+             flex-wrap: wrap;
+             justify-content: space-around;
+         }
+         .productCard {
+             border: 1px solid #ccc;
+             border-radius: 8px;
+             padding: 10px;
+             margin: 10px;
+             width: 200px;
+         }
+     </style>
+ </head>
+ <body>
+     <h1>UCART <%= result.rows[0]['Gender'] %></h1>
+     <form action="/customerform" method="post">
+     <input type="text" id="searchBar" placeholder="Search for products...">
+
+     <button onclick="searchProducts()"  >Search</button>
+
+     <div id="productContainer"></div>
+     <script>
+      async function searchProducts() {
+          try {
+              const searchBar = document.getElementById('searchBar');
+             // const searchBar = document.getElementById('searchBar');
+             const searchValue = searchBar.value;
+             console.log('Search value:', searchValue);
+              const response = await fetch(`/customerhome?search=${searchBar.value}`);
+              const products = await response.json();
+              displayProducts(products);
+          } catch (error) {
+              console.error('Error fetching products:', error.message);
+          }
+      }
+  
+      function displayProducts(products) {
+          const productContainer = document.getElementById('productContainer');
+          productContainer.innerHTML = '';
+          console.log(products);
+          products.forEach(product => {
+              const productCard = document.createElement('div');
+              productCard.classList.add('productCard');
+             console.log("here i am");
+              const img = document.createElement('img');
+              // Assuming the server sends Base64-encoded image data
+              img.src = `data:image/png;base64,${product.IMAGE.toString('base64')}`;
+              img.alt = 'Product Image';
+              img.style.width = '100%';
+  
+              const productName = document.createElement('p');
+              productName.textContent = product.DESCRIPTION;  // Replace with actual column name
+  
+              productCard.appendChild(img);
+              productCard.appendChild(productName);
+  
+              productContainer.appendChild(productCard);
+          });
+      }
+  </script>
+  </form>
+ </body>
+ </html>
+

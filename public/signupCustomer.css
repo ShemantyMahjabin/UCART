@@ -1,0 +1,87 @@
+
+body {
+  background-color: skyblue; /* Sky blue background */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  color: #3498db; /* Blue title color */
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+h3 {
+  color: #2c3e50; /* Dark blue-gray for the form title */
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+label {
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #333;
+  grid-column: span 1;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 15px;
+  grid-column: span 1;
+}
+
+button {
+  background-color: #3498db; /* Blue button color */
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  grid-column: span 2;
+}
+
+button:hover {
+  background-color: #2980b9; /* Darker shade on hover */
+}
+
+a {
+  text-decoration: none;
+  color: #007bff; /* Blue link color */
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: #777;
+  text-align: left;
+}
+
+p a {
+  color: #3498db; /* Blue link color */
+}
+
+p a:hover {
+  text-decoration: underline;
+}

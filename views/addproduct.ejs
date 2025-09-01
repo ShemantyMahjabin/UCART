@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/addproduct.css">
+</head>
+<body>
+    <div class = "logo"></div>
+
+    <div class="container">
+        <h1>Add Product</h1>
+        <a id="backButton" href="#" class="back-button">Back to Seller Home</a>
+        <form action="/addproduct" method="post" enctype="multipart/form-data">
+            <label for="productName">Name:</label>
+            <input type="text" id="productName" name="productName" required>
+
+            <label for="productPrice">Price:</label>
+            <input type="number" id="productPrice" name="productPrice" required>
+
+            <label for="productCategories">Categories:</label>
+            <input type="text" id="productCategories" name="productCategories" required>
+
+            <label for="productQuantity">Quantity:</label>
+            <input type="number" id="productQuantity" name="productQuantity" required>
+
+            <label for="productDescription">Description:</label>
+            <textarea id="productDescription" name="productDescription" rows="5" required></textarea>
+
+            <label for="productDeals">Deals:</label>
+            <input type="text" id="productDeals" name="productDeals" required>
+
+            <label for="productImage">Image:</label>
+            <input type="file" id="productImage" name="productImage" accept="image/*" required>
+            <input type="hidden" id="yourHiddenInputId" name="sellerid">
+            <button type="submit" class="btn btn-primary">Add Product</button>
+        </form>
+    </div>
+
+    <script>
+        function getQueryParam(param) {
+            const params = new URLSearchParams(window.location.search);
+            return params.get(param);
+        }
+
+        const sellerid = getQueryParam('sellerid');
+        console.log(sellerid);
+        document.getElementById('yourHiddenInputId').value = sellerid;
+        if (sellerid) {
+        document.getElementById('backButton').href = `/sellerhome?sellerid=${sellerid}`;
+    }
+    </script>
+
+</body>
+</html>

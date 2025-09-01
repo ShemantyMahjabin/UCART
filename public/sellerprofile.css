@@ -1,0 +1,109 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+.logo {
+    background-image: url("images/ucartlogo.png");
+    background-size: cover;
+    height: 80px;
+    width: 100px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.profile-info {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #cc0000;
+}
+
+.back-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #ff0000;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.back-button:hover {
+    background-color: #cc0000;
+    text-decoration: underline;
+}
+/* ... (previous styles) ... */
+
+.update-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.update-button:hover {
+    background-color: #0056b3;
+}
+.back-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #ff0000;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.back-button:hover {
+    background-color: #cc0000;
+    text-decoration: underline;
+}
